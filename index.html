@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#030303">
+<title>ELZRAZIR — LEGENDARY</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&display=swap');
+:root{--red:#ff2020;--dark:#070708;--card:#0d0d10;--muted:#85858d;--line:#29292f}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{min-height:100vh;background:#030304;color:#fff;font-family:Cairo,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-20%;z-index:-5;background:radial-gradient(circle at 50% 0,#6e0707 0,#250303 22%,#090202 48%,#030304 78%);animation:bg 12s ease-in-out infinite alternate}
+@keyframes bg{to{transform:scale(1.06);filter:brightness(1.12) hue-rotate(7deg)}}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.55) 100%)}
+#stars,#particles{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
+#stars{z-index:-4}#particles{z-index:-3}
+.wrap{width:min(100%,520px);margin:auto;padding:0 15px 65px}
+.top{height:46px;display:flex;justify-content:space-between;align-items:center;color:#4c4c52;font-size:8px;font-weight:900;letter-spacing:1.4px}
+.online{color:#5aee91}.online:before{content:"";display:inline-block;width:6px;height:6px;margin-left:5px;border-radius:50%;background:#5aee91;box-shadow:0 0 12px #5aee91;animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.25}}
+.nav{position:sticky;top:8px;z-index:30;display:flex;gap:7px;overflow:auto;padding:8px;margin:0 -2px 12px;border:1px solid #2c1111;border-radius:17px;background:#080708dd;backdrop-filter:blur(14px);box-shadow:0 10px 30px #0008}
+.nav a{flex:0 0 auto;text-decoration:none;color:#aaa;font-size:9px;font-weight:800;padding:8px 11px;border:1px solid #242429;border-radius:12px;background:#101014;transition:.2s}
+.nav a:hover,.nav a:active{color:#fff;border-color:#8b2020;background:#220707;box-shadow:0 0 18px #f212}
+.hero{text-align:center;padding:24px 0 22px;scroll-margin-top:70px}
+.badge{display:inline-flex;gap:7px;align-items:center;padding:6px 12px;border:1px solid #4b1111;border-radius:99px;background:#120303;color:#aaa;font-size:8px;box-shadow:0 0 22px #f111;margin-bottom:20px}
+.badge i{width:5px;height:5px;border-radius:50%;background:#f33;box-shadow:0 0 10px #f33}
+.logoWrap{width:154px;height:154px;margin:auto;display:grid;place-items:center;position:relative}
+.logoWrap:before,.logoWrap:after{content:"";position:absolute;border-radius:50%;border:1px solid #ff333366}.logoWrap:before{inset:0;border-left-color:transparent;animation:spin 5s linear infinite}.logoWrap:after{inset:13px;border-style:dashed;border-color:#ff333344;animation:spin 8s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.logo{width:112px;height:112px;border-radius:30px;display:grid;place-items:center;background:linear-gradient(145deg,#ff5a5a 0,#900909 48%,#170000 100%);border:1px solid #ffaaaa;box-shadow:0 0 30px #f22,0 0 90px #f222,0 0 0 8px #f211;transform:rotate(-4deg);animation:float 3.2s ease-in-out infinite;font-size:34px;font-weight:900}
+@keyframes float{50%{transform:translateY(-7px) rotate(3deg);box-shadow:0 0 45px #f22,0 0 100px #f222,0 0 0 8px #f213}}
+h1{font-size:39px;letter-spacing:6px;font-weight:900;margin:19px 0 3px;text-shadow:0 0 15px #f22,0 0 45px #f223}
+.subtitle{font-size:9px;color:#777}.subtitle b{color:#ff4b4b}
+.join{height:59px;margin:21px 0 10px;border-radius:19px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;font-size:15px;font-weight:900;background:linear-gradient(115deg,#ff3f3f,#700505,#ff3f3f);background-size:220%;box-shadow:0 13px 40px #f004;border:1px solid #ffffff18;animation:gradient 4s linear infinite;position:relative;overflow:hidden}
+.join:after{content:"";position:absolute;top:0;bottom:0;width:55px;right:-70px;background:linear-gradient(90deg,transparent,#fff5,transparent);transform:skewX(-18deg);animation:shine 2.8s infinite}.join span{position:relative;z-index:2}
+@keyframes gradient{to{background-position:220%}}@keyframes shine{55%,100%{right:120%}}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:9px}.stat{padding:13px;border:1px solid #26262b;border-radius:16px;background:#0b0b0dd9;box-shadow:inset 0 0 25px #f001}.stat b{font-size:13px}.stat span{display:block;color:#5f5f66;font-size:8px}
+.section{margin-top:30px;scroll-margin-top:78px}.heading{display:flex;align-items:center;gap:9px;margin-bottom:12px;font-size:19px;font-weight:900}.heading .line{height:1px;flex:1;background:linear-gradient(90deg,#f22,transparent);box-shadow:0 0 8px #f22}
+.card{display:flex;gap:11px;padding:14px;margin:9px 0;border:1px solid #27272c;border-radius:18px;background:linear-gradient(125deg,#111115,#1a0404);box-shadow:0 9px 28px #0009,inset 0 0 22px #f001;transition:transform .2s,border-color .2s,box-shadow .2s}.card:hover{transform:translateY(-2px);border-color:#721b1b}.card:active{transform:scale(.985)}
+.num{min-width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#270505;border:1px solid #681717;color:#ff5555;font-weight:900;box-shadow:0 0 16px #f212}.card strong{font-size:12px}.card p{font-size:10px;color:#9b9ba2;line-height:1.9;margin-top:3px}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.menu-card{display:block;text-decoration:none;color:#fff;padding:15px;border:1px solid #29292f;border-radius:18px;background:linear-gradient(145deg,#131316,#210505);box-shadow:0 9px 25px #0009,inset 0 0 20px #f001;transition:.2s}.menu-card:hover{transform:translateY(-3px);border-color:#8d2222;box-shadow:0 12px 32px #0009,0 0 22px #f214}.menu-card b{display:block;font-size:12px}.menu-card span{display:block;margin-top:3px;color:#777;font-size:8px}
+.info{padding:17px;border:1px solid #2b2b31;border-radius:19px;background:linear-gradient(145deg,#111115,#180404);box-shadow:inset 0 0 25px #f001}.info p{font-size:10px;color:#aaa;line-height:2.1}.tag{display:inline-block;margin:4px 3px;padding:5px 8px;border:1px solid #521515;border-radius:9px;background:#210707;color:#ff7777;font-size:8px}
+.music{padding:17px;border:1px solid #581717;border-radius:22px;background:linear-gradient(145deg,#200505,#09090b);box-shadow:0 15px 42px #000a,inset 0 0 30px #f001;position:relative;overflow:hidden}.music:before{content:"";position:absolute;width:150px;height:150px;right:-55px;top:-70px;background:#f22;border-radius:50%;filter:blur(60px);opacity:.13}
+.musicrow{display:flex;align-items:center;gap:12px;position:relative}.play{position:relative;width:65px;height:65px;flex:0 0 65px;border-radius:50%;border:1px solid #ff8d8d;color:white;background:radial-gradient(circle at 30% 25%,#ff6767,#8b0808 60%,#260000);box-shadow:0 0 0 7px #f112,0 0 30px #f226;font-size:22px;cursor:pointer}.disc{width:48px;height:48px;border-radius:50%;background:repeating-radial-gradient(circle,#111 0 3px,#d92222 4px 7px,#111 8px 11px);border:2px solid #d33;box-shadow:0 0 18px #f224;animation:spin 2.5s linear infinite;animation-play-state:paused}.music.playing .disc{animation-play-state:running}.music b{font-size:11px}.music small{display:block;color:#777;font-size:9px}.bar{height:6px;background:#29292e;border-radius:8px;margin-top:15px;overflow:hidden}.bar i{display:block;width:0;height:100%;background:linear-gradient(90deg,#780707,#ff4747,#fff);box-shadow:0 0 13px #f22}.time{display:flex;justify-content:space-between;color:#626269;font-size:8px;margin-top:5px}
+.notice{margin-top:15px;padding:17px;text-align:center;border:1px solid #5c1818;border-radius:19px;background:linear-gradient(145deg,#230505,#0b0b0c);color:#aaa;font-size:10px;line-height:2;box-shadow:0 0 30px #f111}.notice b{color:#ff4848}
+.backtop{position:fixed;left:16px;bottom:18px;z-index:40;width:43px;height:43px;border:1px solid #681717;border-radius:50%;background:#160404dd;color:#fff;font-size:17px;cursor:pointer;box-shadow:0 0 25px #f224;backdrop-filter:blur(8px)}
+.footer{text-align:center;color:#444;font-size:8px;letter-spacing:2px;margin-top:28px}
+@media(max-width:360px){h1{font-size:32px}.menu-grid{grid-template-columns:1fr}.nav a{font-size:8px;padding:7px 9px}}
+@media(prefers-reduced-motion:reduce){*,*:before{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas><canvas id="particles"></canvas>
+<main class="wrap">
+<header class="top"><span>ELZRAZIR // LEGENDARY</span><span class="online">ONLINE</span></header>
+
+<nav class="nav">
+<a href="#home">🏠 الرئيسية</a><a href="#menu">📂 القائمة</a><a href="#rules">📜 القوانين</a><a href="#gang">⚔️ العصابة</a><a href="#ranks">👑 الرتب</a><a href="#apply">📝 التقديمات</a><a href="#members">👥 الأعضاء</a><a href="#news">📰 الأخبار</a><a href="#media">🎬 الوسائط</a><a href="#music-section">🎵 الموسيقى</a><a href="#contact">💬 التواصل</a>
+</nav>
+
+<section class="hero" id="home">
+<div class="badge"><i></i> OFFICIAL GANG • LEGENDARY EDITION</div>
+<div class="logoWrap"><div class="logo">EZ</div></div>
+<h1>ELZRAZIR</h1>
+<div class="subtitle">⚔️ <b>RESPECT • LOYALTY • POWER</b></div>
+<a class="join" href="https://discord.gg/je4TK7KRaz" target="_blank" rel="noopener"><span>💬 انضم إلى الديسكورد</span></a>
+<div class="stats"><div class="stat"><b>DISCORD</b><span>OFFICIAL SERVER</span></div><div class="stat"><b>24/7</b><span>GANG ACTIVITY</span></div></div>
+</section>
+
+<section class="section" id="menu"><div class="heading">📂 القائمة الرئيسية <span class="line"></span></div>
+<div class="menu-grid">
+<a class="menu-card" href="#rules"><b>📜 القوانين</b><span>قوانين السيرفر والعصابة</span></a>
+<a class="menu-card" href="#ranks"><b>👑 الرتب</b><span>التدرج والرتب المتاحة</span></a>
+<a class="menu-card" href="#apply"><b>📝 التقديمات</b><span>طلبات الانضمام والرتب</span></a>
+<a class="menu-card" href="#members"><b>👥 الأعضاء</b><span>مجتمع ELZRAZIR</span></a>
+<a class="menu-card" href="#news"><b>📰 الأخبار</b><span>آخر أخبار العصابة</span></a>
+<a class="menu-card" href="#media"><b>🎬 الوسائط</b><span>صور وفيديوهات العصابة</span></a>
+<a class="menu-card" href="#music-section"><b>🎵 الموسيقى</b><span>ELZRAZIR TRACK</span></a>
+<a class="menu-card" href="#contact"><b>💬 التواصل</b><span>الديسكورد والإدارة</span></a>
+</div></section>
+
+<section class="section" id="rules"><div class="heading">📜 القوانين العامة <span class="line"></span></div>
+<div class="card"><div class="num">01</div><div><strong>🤝 الاحترام</strong><p>احترم جميع الأعضاء والإدارة، وممنوع الإساءة أو الاستفزاز.</p></div></div>
+<div class="card"><div class="num">02</div><div><strong>🚫 ممنوع السبام</strong><p>ممنوع إغراق الشات بالرسائل أو المنشنات بدون سبب.</p></div></div>
+<div class="card"><div class="num">03</div><div><strong>📢 الالتزام بالتعليمات</strong><p>يجب الالتزام بتعليمات الإدارة وقراراتها داخل السيرفر.</p></div></div>
+<div class="card"><div class="num">04</div><div><strong>🛡️ حافظ على النظام</strong><p>أي محتوى مخالف أو تصرف يضر بالسيرفر يعرض صاحبه للعقوبة.</p></div></div>
+</section>
+
+<section class="section" id="gang"><div class="heading">⚔️ قوانين العصابة <span class="line"></span></div>
+<div class="card"><div class="num">01</div><div><strong>🚫 ممنوع الشتيمة</strong><p>ممنوع استخدام الشتائم أو الإهانات بأي وسيلة داخل العصابة.</p></div></div>
+<div class="card"><div class="num">02</div><div><strong>🎯 الانتظام في الفيتات</strong><p>يجب الالتزام والانتظام في الفيتات والمشاركة مع أفراد العصابة.</p></div></div>
+<div class="card"><div class="num">03</div><div><strong>🚗 ممنوع تفقيع عربية صاحبك</strong><p>ممنوع تفقيع أو تدمير عربية أي عضو طالما هو غير راضي أو غير موافق.</p></div></div>
+<div class="card"><div class="num">04</div><div><strong>🎮 اللعب المستمر</strong><p>الاستمرار في اللعب والعمل على رفع الليفل والتقدم داخل العصابة.</p></div></div>
+<div class="card"><div class="num">05</div><div><strong>⚠️ ممنوع ضرب أعضاء العصابة</strong><p>ممنوع ضرب أي شخص من العصابة إلا بوجود اتفاق مسبق بين الطرفين.</p></div></div>
+<div class="card"><div class="num">06</div><div><strong>🛡️ العقوبات</strong><p>أي عضو يخالف القوانين أو لا يلتزم بها سيتم اتخاذ الإجراء المناسب بحقه من الإدارة.</p></div></div>
+</section>
+
+<section class="section" id="ranks"><div class="heading">👑 الرتب <span class="line"></span></div>
+<div class="info">
+<p>نظام الرتب مصمم لتنظيم العصابة وتحديد مسؤوليات كل مستوى.</p>
+<span class="tag">👑 الإدارة العليا</span><span class="tag">🛡️ المشرفين</span><span class="tag">👀 مراقبي الشات والبان</span><span class="tag">📝 فريق التقديمات</span><span class="tag">🎫 الدعم والتذاكر</span><span class="tag">⚔️ أعضاء العصابة</span>
+</div></section>
+
+<section class="section" id="apply"><div class="heading">📝 التقديمات <span class="line"></span></div>
+<div class="card"><div class="num">01</div><div><strong>👑 طلب رتبة الإدارة</strong><p>للتقديم على رتبة إدارية داخل ELZRAZIR، توجه إلى الديسكورد وافتح الطلب المناسب.</p></div></div>
+<div class="card"><div class="num">02</div><div><strong>👀 مراقب الشاتات والبان</strong><p>للمهتمين بالمساعدة في تنظيم الشات ومتابعة المخالفات.</p></div></div>
+<div class="card"><div class="num">03</div><div><strong>📝 رتبة التقديمات</strong><p>لأعضاء فريق مراجعة وتنظيم طلبات الرتب.</p></div></div>
+<a class="join" href="https://discord.gg/je4TK7KRaz" target="_blank" rel="noopener"><span>📝 اذهب إلى الديسكورد للتقديم</span></a>
+</section>
+
+<section class="section" id="members"><div class="heading">👥 الأعضاء <span class="line"></span></div>
+<div class="info"><p>مجتمع ELZRAZIR مفتوح للأعضاء الملتزمين بالقوانين. شارك، ساعد، وتقدم داخل العصابة.</p><span class="tag">ACTIVE COMMUNITY</span><span class="tag">24/7</span><span class="tag">ELZRAZIR</span></div></section>
+
+<section class="section" id="news"><div class="heading">📰 الأخبار والإعلانات <span class="line"></span></div>
+<div class="card"><div class="num">01</div><div><strong>📢 آخر الإعلانات</strong><p>تابع قناة الإعلانات داخل الديسكورد لمعرفة القرارات والمواعيد والتحديثات الجديدة.</p></div></div>
+<div class="card"><div class="num">02</div><div><strong>🔥 فعاليات العصابة</strong><p>يتم الإعلان عن الفعاليات والفيتات والأنشطة الجديدة من خلال السيرفر.</p></div></div>
+</section>
+
+<section class="section" id="media"><div class="heading">🎬 الوسائط <span class="line"></span></div>
+<div class="info"><p>قسم مخصص لصور وفيديوهات ولقطات ELZRAZIR. يمكن إضافة روابط الصور والفيديوهات هنا لاحقًا.</p></div></section>
+
+<section class="section" id="music-section"><div class="heading">🎵 ELZRAZIR TRACK <span class="line"></span></div>
+<div class="music" id="music">
+<div class="musicrow"><button class="play" id="play" aria-label="تشغيل">▶</button><div class="disc"></div><div><b>OFFICIAL GANG TRACK</b><small>اضغط تشغيل واستمتع بالموسيقى</small></div></div>
+<div class="bar" id="barWrap"><i id="bar"></i></div><div class="time"><span id="cur">00:00</span><span id="dur">00:00</span></div>
+</div>
+<audio id="audio" preload="metadata"></audio>
+<div class="notice"><b>🎧 ملاحظة:</b><br>ضع ملف الموسيقى الخاص بك باسم <b>music.mp3</b> بجانب ملف index.html في GitHub، وسيعمل المشغل تلقائيًا.</div>
+</section>
+
+<section class="section" id="contact"><div class="heading">💬 التواصل <span class="line"></span></div>
+<div class="info"><p>للتواصل مع أعضاء وإدارة ELZRAZIR، استخدم السيرفر الرسمي.</p></div>
+<a class="join" href="https://discord.gg/je4TK7KRaz" target="_blank" rel="noopener"><span>💬 دخول سيرفر ELZRAZIR</span></a>
+</section>
+
+<div class="footer">ELZRAZIR • LEGENDARY EDITION • RESPECT • LOYALTY • POWER</div>
+</main>
+<button class="backtop" id="backtop" title="العودة للأعلى">↑</button>
+
+<script>
+const stars=document.getElementById('stars'),particles=document.getElementById('particles');
+function setupCanvas(c){const d=devicePixelRatio||1;c.width=innerWidth*d;c.height=innerHeight*d;const x=c.getContext('2d');x.scale(d,d);return x}
+let sx=setupCanvas(stars),px=setupCanvas(particles);
+let ss=Array.from({length:90},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.5+.2,a:Math.random()}));
+let ps=Array.from({length:28},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*2+1,v:Math.random()*.35+.1,a:Math.random()}));
+function draw(){
+ sx.clearRect(0,0,innerWidth,innerHeight);ss.forEach(s=>{s.a+=.01;sx.globalAlpha=.18+.25*(Math.sin(s.a)+1)/2;sx.beginPath();sx.arc(s.x,s.y,s.r,0,Math.PI*2);sx.fillStyle='#fff';sx.fill()});
+ px.clearRect(0,0,innerWidth,innerHeight);ps.forEach(p=>{p.y-=p.v;if(p.y<0)p.y=innerHeight;p.a+=.02;px.globalAlpha=.08+.1*(Math.sin(p.a)+1)/2;px.beginPath();px.arc(p.x,p.y,p.r,0,Math.PI*2);px.fillStyle='#f33';px.fill()});requestAnimationFrame(draw)
+}
+draw();addEventListener('resize',()=>{sx=setupCanvas(stars);px=setupCanvas(particles)});
+const audio=document.getElementById('audio'),play=document.getElementById('play'),music=document.getElementById('music'),bar=document.getElementById('bar'),cur=document.getElementById('cur'),dur=document.getElementById('dur');
+audio.src='music.mp3';
+function fmt(v){if(!isFinite(v))return'00:00';v=Math.floor(v);return String(Math.floor(v/60)).padStart(2,'0')+':'+String(v%60).padStart(2,'0')}
+play.onclick=()=>{if(audio.paused){audio.play().then(()=>{play.textContent='❚❚';music.classList.add('playing')}).catch(()=>alert('أضف ملف music.mp3 بجانب index.html ثم جرّب التشغيل.'))}else{audio.pause();play.textContent='▶';music.classList.remove('playing')}};
+audio.ontimeupdate=()=>{cur.textContent=fmt(audio.currentTime);bar.style.width=(audio.duration?audio.currentTime/audio.duration*100:0)+'%'};
+audio.onloadedmetadata=()=>dur.textContent=fmt(audio.duration);
+audio.onended=()=>{play.textContent='▶';music.classList.remove('playing');bar.style.width='0%'};
+document.getElementById('barWrap').onclick=e=>{if(audio.duration)audio.currentTime=(e.offsetX/e.currentTarget.clientWidth)*audio.duration};
+document.getElementById('backtop').onclick=()=>scrollTo({top:0,behavior:'smooth'});
+</script>
+</body>
+</html>
